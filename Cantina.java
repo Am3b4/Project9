@@ -43,6 +43,11 @@ public class Cantina {
     public void setNome(String Nome) {
         this.nome = Nome;
     }
+
+    @Override
+    public String toString() {
+        return "Citta: " + citta + "; Nome: " + nome + "; Anno: " + anno;
+    }
     
     
     

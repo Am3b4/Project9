@@ -26,8 +26,8 @@ public class Nodo {
         
         /*Costruttore copia*/
         
-        info = link.getInfo();
-        this.link = link;
+        this.info = link.getInfo();
+        this.link = link.getLink();
     }
     
     public Nodo(BevandaAlcolica info, Nodo link){
