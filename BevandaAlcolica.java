@@ -1,6 +1,6 @@
 package project9;
 
-public abstract class BevandaAlcolica {
+public class BevandaAlcolica {
     
     private Cantina produttore; 
     private double tassoAlc;
@@ -48,11 +48,14 @@ public abstract class BevandaAlcolica {
         
     }
 
-    @Override
-    public String toString() {
+    public String toStringBA() {
         
         String ris = "TassoAlc: " + tassoAlc + "; Cantina: " + produttore.toString();
         return ris; 
+    }
+    
+    public String toStringCSV(){
+        return tassoAlc+","+produttore.toStringCSV();
     }
     
     

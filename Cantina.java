@@ -49,6 +49,10 @@ public class Cantina {
         return "Citta: " + citta + "; Nome: " + nome + "; Anno: " + anno;
     }
     
+    public String toStringCSV(){
+        return citta+","+nome+","+anno;
+    }
+    
     
     
     

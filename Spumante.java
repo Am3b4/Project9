@@ -1,6 +1,6 @@
 package project9;
 
-public class Spumante extends BevandaAlcolica{
+public class Spumante extends BevandaAlcolica implements Servizio{
     
     private String frizzantezza;
     private String abbinamento;
@@ -56,7 +56,17 @@ public class Spumante extends BevandaAlcolica{
 
     @Override
     public String toString() {
-        return "Spumante: " + super.toString() + "; Abbinamento: " + abbinamento + "; Frizzantezza: " + frizzantezza;
+        return "Spumante: " + super.toStringBA() + "; Abbinamento: " + abbinamento + "; Frizzantezza: " + frizzantezza;
+    }
+    
+    @Override
+    public String toStringCSV(){
+        return "Spumante,"+frizzantezza+","+abbinamento+","+getTassoAlc()+","+getProduttore().toStringCSV();
+    }
+    
+    @Override
+    public String servizio(){
+        return "Deve essere servito a 14 gradi";
     }
     
 }
